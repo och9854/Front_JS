@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .blue {
+            width: 0px;
+            height: 5px;
+            background-color: rgb(92,100,254);
+        }
+
+        .lyrics {
+            width: 250px;
+            height: 150px;
+            overflow-y: scroll; /* 넘쳤을 떄*/
+            background-color: aqua;
+        }
+    </style>
+
+    <div class="blue"></div>
+    <div class="lyrics">
+        <p> Song lyrics Song lyrics Song lyrics Song lyrics Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+            Song lyrics Song lyrics Song lyrics Song lyrics
+
+        </p>
+    </div>
+
+    <script>
+        let bar = document.querySelector('.blue');
+        let lyrics = document.querySelector('.lyrics');
+
+        lyrics.addEventListener("scroll", function () {
+            let scrollTop = lyrics.scrollTop;
+            let scrollHeight = lyrics.scrollHeight - lyrics.clientHeight;
+
+            let per = scrollTop / scrollHeight;
+
+            bar.style.width = `${per*250}px`;
+        });
+
+
+    </script>
+
+</body>
+</html>
