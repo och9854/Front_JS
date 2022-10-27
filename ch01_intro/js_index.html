@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = 1;
+        const b = 2;
+        const sum = a+b;
+
+        console.log(sum); // 3
+
+        function add(num1, num2) {
+            return num1+num2;
+        }
+
+        const sum2 = add(1,30);
+        console.log(sum2); // 300
+
+        function hello(name) {
+            console.log(`hello, ${name}`); // use "grave"!
+        }
+
+        const lion = hello("lion");
+
+        // object
+        const sample = {
+            'key with space': true
+        };
+        const likelion = {
+            name: "lion_01",
+            age: 10
+        };
+
+        console.log("test");
+        console.log(likelion.name);
+        console.log(likelion.age);
+
+        const numArray = [1,2,3,4,5];
+        console.log(numArray);
+
+        const object = [
+            { name: 'Like'},
+            {name: "Lion"}
+        ];
+        console.log(object[0]);
+        console.log(object[1]);
+
+        // add
+        object.push(
+            {name: "JS"}
+        );
+
+        console.log(object);
+
+
+    </script>
+
+</body>
+</html>
